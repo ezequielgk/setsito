@@ -71,3 +71,4 @@ Sitio web moderno y responsive ThePool Graphic Designer Made by [Arsbyte](https:
     - Click derecho en `index.html` → "Open with Live Server"
 
 
+:b
