@@ -1,0 +1,97 @@
+/* ══════════════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════════════ */
+
+footer {
+    position: relative;
+    z-index: 100;
+    padding: 20px var(--nav-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeSlideUp 0.8s var(--transition-smooth) 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.collab {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.collab-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.collab-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gradient-accent);
+    transition: width 0.3s var(--transition-smooth);
+}
+
+.collab-name:hover {
+    color: var(--accent-primary);
+}
+
+.collab-name:hover::after {
+    width: 100%;
+}
+
+.collab-x {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulseX 2s ease-in-out infinite;
+}
+
+@keyframes pulseX {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(0.95);
+    }
+}
+
+.collab-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+    opacity: 0.5;
+}
+
+/* Link en el footer (opcional) */
+.collab-name.is-link {
+    text-decoration: none;
+    cursor: pointer;
+}

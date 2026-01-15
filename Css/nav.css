@@ -1,0 +1,132 @@
+/* ══════════════════════════════════════════════════════════
+   NAVEGACIÓN
+   ══════════════════════════════════════════════════════════ */
+
+nav {
+    padding: var(--nav-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    animation: fadeSlideDown 0.8s var(--transition-smooth) forwards;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.95); }
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -1px;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Texto del rol */
+.role-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.role-line {
+    width: 30px;
+    height: 1px;
+    background: var(--gradient-accent);
+    opacity: 0.5;
+}
+
+/* Botón Discord */
+.discord-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 45, 85, 0.3);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.discord-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-accent);
+    opacity: 0;
+    transition: opacity 0.4s var(--transition-smooth);
+    z-index: -1;
+}
+
+.discord-btn:hover::before {
+    opacity: 1;
+}
+
+.discord-btn:hover {
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px var(--accent-glow);
+}
+
+.discord-btn i {
+    font-size: 1.1rem;
+    transition: transform 0.3s var(--transition-bounce);
+}
+
+.discord-btn:hover i {
+    transform: scale(1.2);
+}
+
+.btn-arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.discord-btn:hover .btn-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -1,0 +1,12 @@
+/* ══════════════════════════════════════════════════════════
+   POOL - Thumbnail Designer Portfolio
+   Archivo principal que importa todos los módulos CSS
+   ══════════════════════════════════════════════════════════ */
+
+@import url('variables.css');
+@import url('base.css');
+@import url('backgrounds.css');
+@import url('nav.css');
+@import url('slider.css');
+@import url('footer.css');
+@import url('responsive.css');

@@ -1,0 +1,124 @@
+/* ══════════════════════════════════════════════════════════
+   FONDOS ANIMADOS Y EFECTOS
+   ══════════════════════════════════════════════════════════ */
+
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 45, 85, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 45, 85, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+    animation: floatGlow 8s ease-in-out infinite;
+}
+
+.glow-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-primary);
+    opacity: 0.08;
+    top: -200px;
+    right: -100px;
+    animation-delay: 0s;
+}
+
+.glow-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-secondary);
+    opacity: 0.06;
+    bottom: -150px;
+    left: -100px;
+    animation-delay: -4s;
+}
+
+@keyframes floatGlow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, 20px) scale(1.1); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   TEXTO DE FONDO (MY WORKS)
+   ══════════════════════════════════════════════════════════ */
+
+.bg-text {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 12vw, 12rem);
+    font-weight: 800;
+    position: absolute;
+    z-index: 1;
+    line-height: 0.85;
+    letter-spacing: -4px;
+    pointer-events: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px var(--accent-primary);
+    -webkit-text-fill-color: transparent;
+    opacity: 0.3;
+    transition: all 0.5s var(--transition-smooth);
+}
+
+.bg-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke: 0;
+    opacity: 0;
+    transition: opacity 0.5s var(--transition-smooth);
+    filter: blur(0);
+}
+
+.slider-wrapper:hover ~ .bg-text::after,
+.bg-text:hover::after {
+    opacity: 0.15;
+}
+
+.text-my {
+    top: 5%;
+    left: 3%;
+    animation: slideInLeft 1s var(--transition-smooth) 0.2s forwards;
+    opacity: 0;
+}
+
+.text-works {
+    bottom: 5%;
+    right: 3%;
+    animation: slideInRight 1s var(--transition-smooth) 0.4s forwards;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 0.3;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 0.3;
+        transform: translateX(0);
+    }
+}

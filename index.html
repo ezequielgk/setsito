@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POOL | Thumbnail Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <!-- Fondo animado -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+    <nav>
+        <div class="logo">
+            <span class="logo-text">POOL</span>
+        </div>
+        <div class="role-text">
+            <span class="role-line"></span>
+            Thumbnailer & Graphic Design Student
+            <span class="role-line"></span>
+        </div>
+        <a href="https://discordapp.com/users/1146137221708128376" target="_blank" class="discord-btn">
+            <i class="fa-brands fa-discord"></i>
+            <span class="btn-text">Contacto</span>
+            <span class="btn-arrow">→</span>
+        </a>
+    </nav>
+
+    <main>
+        <div class="hero-container">
+            <h1 class="bg-text text-my" data-text="MY">MY</h1>
+
+            <div class="slider-wrapper">
+                <div class="slider-frame">
+                    <div class="slider-container">
+                        <div class="slide active" style="background-image: url('assets/image_42f1e5.png')"></div>
+                        <div class="slide" style="background-image: url('assets/image_42eec3.png')"></div>
+                        <div class="slide" style="background-image: url('assets/image_42eea0.png')"></div>
+                        <div class="slide" style="background-image: url('assets/image_42f20a.png')"></div>
+                        <div class="slide" style="background-image: url('assets/image_42ee29.png')"></div>
+                    </div>
+
+                    <!-- Controles del slider -->
+                    <button class="slider-nav prev" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-nav next" aria-label="Siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Indicadores -->
+                    <div class="slider-dots"></div>
+
+                    <!-- Contador -->
+                    <div class="slide-counter">
+                        <span class="current">01</span>
+                        <span class="separator">/</span>
+                        <span class="total">05</span>
+                    </div>
+                </div>
+
+                <!-- Decoraciones -->
+                <div class="frame-corner top-left"></div>
+                <div class="frame-corner top-right"></div>
+                <div class="frame-corner bottom-left"></div>
+                <div class="frame-corner bottom-right"></div>
+            </div>
+
+            <h1 class="bg-text text-works" data-text="WORKS">WORKS</h1>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="collab">
+            <span class="collab-line"></span>
+            <a href="https://github.com/Ars-byte" target="_blank" rel="noopener noreferrer" class="collab-link">
+                <span class="collab-name">Ars-byte</span>
+            </a>
+            <span class="collab-x">✕</span>
+            <a href="https://github.com/ezequielgk" target="_blank" rel="noopener noreferrer" class="collab-link">
+                <span class="collab-name">Ezequiel</span>
+            </a>
+            <span class="collab-line"></span>
+        </div>
+    </footer>
+
+    <!-- Barra de progreso del slider -->
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Scripts modulares -->
+    <script src="Js/config.js"></script>
+    <script src="Js/dom.js"></script>
+    <script src="Js/progress.js"></script>
+    <script src="Js/slider.js"></script>
+    <script src="Js/events.js"></script>
+    <script src="Js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+/* ══════════════════════════════════════════════════════════
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+    /* Paleta de colores principal */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --accent-primary: #ff2d55;
+    --accent-secondary: #ff6b35;
+    --accent-glow: rgba(255, 45, 85, 0.4);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.5);
+    --text-muted: rgba(255, 255, 255, 0.25);
+
+    /* Gradientes */
+    --gradient-accent: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-dark: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+
+    /* Tipografía */
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    /* Espaciado */
+    --nav-padding: clamp(20px, 4vw, 60px);
+
+    /* Transiciones */
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

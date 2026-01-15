@@ -1,0 +1,145 @@
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE DESIGN
+   ══════════════════════════════════════════════════════════ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .role-text {
+        display: none;
+    }
+
+    .bg-text {
+        font-size: clamp(3rem, 15vw, 10rem);
+    }
+
+    .text-my {
+        top: 8%;
+        left: 5%;
+    }
+
+    .text-works {
+        bottom: 8%;
+        right: 5%;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 15px 20px;
+    }
+
+    .collab {
+        font-size: 0.7rem;
+        gap: 8px;
+    }
+
+    .collab-line {
+        width: 25px;
+    }
+
+    .logo-icon {
+        font-size: 1.2rem;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .discord-btn {
+        padding: 10px 14px;
+    }
+
+    .btn-text,
+    .btn-arrow {
+        display: none;
+    }
+
+    .discord-btn i {
+        font-size: 1.3rem;
+    }
+
+    .slider-frame {
+        width: 90vw;
+        border-radius: 12px;
+    }
+
+    .slider-nav {
+        width: 36px;
+        height: 36px;
+        opacity: 0.7;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .slide-counter {
+        top: 12px;
+        right: 12px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .slide-counter .current {
+        font-size: 1rem;
+    }
+
+    .slider-dots {
+        bottom: 12px;
+        gap: 8px;
+    }
+
+    .slider-dots .dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .frame-corner {
+        display: none;
+    }
+
+    .bg-text {
+        font-size: clamp(2.5rem, 18vw, 6rem);
+        letter-spacing: -2px;
+    }
+
+    .text-my {
+        top: 12%;
+        left: 5%;
+    }
+
+    .text-works {
+        bottom: 12%;
+        right: 5%;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    nav {
+        padding: 15px;
+    }
+
+    .slider-frame {
+        width: 95vw;
+    }
+
+    .bg-text {
+        opacity: 0.2;
+    }
+}
+
+/* Preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
