@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-Sitio web moderno y responsive ThePool Graphic Designer Made by [Arsbyte](https://github.com/Ars-byte) [Ezequiel](https://github.com/ezequielgk) , construido con tecnologías web estáticas. Incluye documentación completa, preguntas frecuentes, información del equipo y recursos para la comunidad.
+Sitio web moderno y responsive ThePool Graphic Designer Made by [Arsbyte](https://github.com/Ars-byte) [Ezequiel](https://github.com/ezequielgk) , construido con tecnologías web estáticas.
 
 ## 🛠️ Tecnologías utilizadas
 
